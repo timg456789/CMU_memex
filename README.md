@@ -61,11 +61,28 @@ Media: iframes and other foreign sourced content
 
 ## Revisions from Fork
 
+Here's the plan for this project:
+1. Build a crawler/indexer to pull this data every second for a specific location. **I want something fast enough to get pages which are taken down.**
+2. I want to transiently index this data from live pages into dynamodb. As seen in my SlideShowCreator.
+3. Once the process is setup, I want to scale it out
+   3. I expect to have cdn/anti-ddos/rate limiting come into play here. I'll deal with the issue as it arises at whatever scale.
+   1. State-wide
+   2. Nation-wide
+   3. Internationally (Only if things go extremely well, but it may be an insane amount of data for my limited resources)
+4. From here it will get very interesting. I will have near real-time raw source data across the entire United States or Globe. This will be beautiful data, because I can do very basic things such as ask:
+  - what city has the most amount of ads per capita?
+  - what city has the least amount of ads per capita?
+  - is there any relation between per capita income in a city to the number of ads?
+  - is there any relation between crime rates to the number of ads?
+5. Now I will be able to begin searching new sites to see what else is out there.
+
 ## Building
 
-1. Download and install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+You must use Java version 7. If you use java version 8 you will get an error when loading the application.xgapp which I believe is the core config and has to be loaded: https://github.com/mille856/CMU_memex/issues/1. The java version may be a bigger issue with GATE. I did try to update the gate.jar file, but that didn't work. I've archived Java/Eclipse installs locally, github doesn't allow greater than 100mb files, so the project can always be built.
 
-2. Download and install [Eclipse](https://www.eclipse.org/downloads/)
+1. Download and install [Java - jdk1.7.0_80] (http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
 
-3. Open eclipse and set the workspace to `/TJBatchExtractor`
+2. Download and install [Eclipse - Kepler SR2 - eclipse-standard-kepler-SR2-win32-x86_64.zip] (http://www.eclipse.org/downloads/packages/release/kepler/sr2)
 
+3. From here you should just need to set the eclipse workspace to CMU_MEMEX\Eclipse
+*I will have to test this on a new fresh checkout*
