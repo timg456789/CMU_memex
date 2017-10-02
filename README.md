@@ -59,4 +59,13 @@ Url: urls specifically referenced or linked to in the body
 
 Media: iframes and other foreign sourced content
 
+## Revisions from Fork
+
+## Building
+
+1. Download and install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+2. Download and install [Eclipse](https://www.eclipse.org/downloads/)
+
+3. Open eclipse and set the workspace to `/TJBatchExtractor`
 
