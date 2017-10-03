@@ -1,5 +1,13 @@
-TJBatchExtractor
-=================
+# Memex
+
+https://www.darpa.mil/program/memex
+>Memex plans to explore three technical areas of interest: domain-specific indexing, domain-specific search, and DoD-specified applications. **The program is specifically not interested in proposals for the following: attributing anonymous services, deanonymizing or attributing identity to servers or IP addresses, or accessing information not intended to be publicly available.** The program plans to use commodity hardware and emphasize creating and leveraging open source technology and architecture.
+
+>The Memex program gets its name and inspiration from a hypothetical device described in “As We May Think,” a 1945 article for The Atlantic Monthly written by Vannevar Bush, director of the U.S. Office of Scientific Research and Development (OSRD) during World War II. Envisioned as an analog computer to supplement human memory, the memex (a combination of “memory” and “index”) would store and automatically cross-reference all of the user’s books, records and other information.
+
+[Related Projecs](https://opencatalog.darpa.mil/MEMEX.html)
+
+## TJBatchExtractor
 This project is a regular expression based information extractor designed to operate on
 text captured from female escort advertisements originating from {US}
 sections of Backpage.com. The motivation is to extract domain specific
