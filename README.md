@@ -28,6 +28,12 @@ Here's the plan for this project:
 
 At this point I want to answer one question, what does the delta look like for major events like the super bowl and south by south west (sxsw). I read that these events are notorious for human trafficking, but I don't see the hard data. I will be in a unique position to collect that raw data and answer the question.
 
+### Execution
+
+.NET -> Backpage -> Call Java Jar -> Import unique file for the crawl set -> Export to unique csv file -> Dump into dynamo db
+
+I can process 411 records in 10 seconds. That's 41.1 records per second. The current target is 150,000 records per day. `150,000 records / 41.1 seconds per record = 3,650 seconds = 60 minutes`. This is great, it means the trouble will be in the network. Luckily I happen to have spent the last few months focusing on .NET's http client doing bulk operations on live HTTP sites in my Slideshow Creator so the problem is right where I want it. It probably will not even have defenses like images.nga.gov, but I welcome any such challenges.
+
 [Related Projecs](https://opencatalog.darpa.mil/MEMEX.html)
 
 ## TJBatchExtractor
