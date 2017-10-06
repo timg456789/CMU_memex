@@ -14,9 +14,6 @@ https://www.darpa.mil/program/memex
 
 ## Project Plan
 
-3. Crawl live data multiple times in a day
-3. Crawl live data in multiple locations/site sections
-
 Here's the plan for this project:
 1. Process live data dynamically to create the `Output.csv` file
 2. Send the `Output.csv` file to persistent and indexed storage
@@ -29,6 +26,10 @@ Here's the plan for this project:
 At this point I want to answer one question, what does the delta look like for major events like the super bowl and south by south west (sxsw). I read that these events are notorious for human trafficking, but I don't see the hard data. I will be in a unique position to collect that raw data and answer the question.
 
 ### Execution
+
+Add Java 7 to the PATH. Run the following command from the builds directory
+
+    C:\Users\peon\Desktop\projects\CMU_memex\Builds\2017-10-05\Build>java -jar 2017-10-05.jar Example_text.txt Out
 
 .NET -> Backpage -> Call Java Jar -> Import unique file for the crawl set -> Export to unique csv file -> Dump into dynamo db
 
@@ -106,3 +107,17 @@ You must use Java version 7. If you use java version 8 you will get an error whe
 
 3. From here you should just need to set the eclipse workspace to CMU_MEMEX\Eclipse
 *I will have to test this on a new fresh checkout*
+
+## Further Reading
+
+Great paper on ad analysis which would come into play after crawling and indexing is complete: http://repository.cmu.edu/cgi/viewcontent.cgi?article=1153&context=hsshonors
+
+For example, what images are worth analyzing. Financially I can't do image analysis on all images. At least not with AWS Rekognition. Also a very interesting point made was that ads listed as *19* were signals for being underage. The paper is also good in that it defines *human trafficking*.
+
+The author, Emily Kennedy has a business creating anti-human trafficking software called [Traffic Jam](http://www.marinusanalytics.com/)
+
+http://www.marinusanalytics.com/articles/2017/6/27/face-search-debut
+
+>The combination of the new FaceSearch into the existing Traffic Jam platform will make it possible for detectives to start with a photo of a missing child, a social media photo, or a photo from a social worker, and quickly determine whether this potential victim has been advertised online for commercial sex.
+
+Most interestingly it only incorporated image analysis in June 2017. That's very recent.
