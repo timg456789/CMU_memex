@@ -12,6 +12,12 @@ https://www.darpa.mil/program/memex
 
 >The Memex program gets its name and inspiration from a hypothetical device described in “As We May Think,” a 1945 article for The Atlantic Monthly written by Vannevar Bush, director of the U.S. Office of Scientific Research and Development (OSRD) during World War II. Envisioned as an analog computer to supplement human memory, the memex (a combination of “memory” and “index”) would store and automatically cross-reference all of the user’s books, records and other information.
 
+## Issues
+
+### Link Path Truncation
+
+When a link like `https://darrienamor.wixsite.com/mysite1` is extracted, the link appears as `https://darrienamor.wixsite.com`. This is an issue, because some links depend upon the path. Dropping the path may result in an HTTP 404 resonse from the website.
+
 ## Creating Release Builds
 
 Eclipse -> File -> Export -> Runnable Jar File to produce the [YYYY-MM-DD].jar file
