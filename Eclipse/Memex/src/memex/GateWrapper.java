@@ -41,6 +41,18 @@ public class GateWrapper {
 		String sep = "..THIS IS MY SEPARATION STRING..";
 		String title = "";
 		Boolean trimmed = false;
+		String line = "";
+		
+		int sourceUrlIndexEnd = body.indexOf(" ");
+		String sourceUrl = body.substring(0, sourceUrlIndexEnd);
+		body = body.substring(sourceUrlIndexEnd + 1, body.length());
+		line += sourceUrl + ",";
+		
+		int exactUrlIndexEnd = body.indexOf(" ");
+		String exactUrl = body.substring(0, exactUrlIndexEnd);
+		body = body.substring(exactUrlIndexEnd + 1, body.length());
+		line += exactUrl + ",";
+		
 		int age_end = body.indexOf(",>");
 		if (age_end>=0 && age_end < body.length()) {
 			int age_start = body.lastIndexOf("-",age_end);
@@ -77,7 +89,6 @@ public class GateWrapper {
 		application.execute();
 		corpus.clear();
 		
-		String line = "";
 		AnnotationSet Annots = doc.getAnnotations("");
 		
 		Integer FirstPersonCount=0, ThirdPersonCount=0;

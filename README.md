@@ -12,20 +12,11 @@ https://www.darpa.mil/program/memex
 
 >The Memex program gets its name and inspiration from a hypothetical device described in “As We May Think,” a 1945 article for The Atlantic Monthly written by Vannevar Bush, director of the U.S. Office of Scientific Research and Development (OSRD) during World War II. Envisioned as an analog computer to supplement human memory, the memex (a combination of “memory” and “index”) would store and automatically cross-reference all of the user’s books, records and other information.
 
-## Project Plan
+## Creating Release Builds
 
-Here's the plan for this project:
-1. Process live data dynamically to create the `Output.csv` file
-2. Send the `Output.csv` file to persistent and indexed storage
-4. Scale out
-   1. I expect to have CDN/anti-ddos/rate limiting come into play here. I'll deal with the issue as it arises at whatever scale.
-   2. State-wide
-   3. Nation-wide
-   4. Internationally (Only if things go extremely well, but it may be an insane amount of data for my limited resources)
+Eclipse -> File -> Export -> Runnable Jar File to produce the [YYYY-MM-DD].jar file
 
-At this point I want to answer one question, what does the delta look like for major events like the super bowl and south by south west (sxsw). I read that these events are notorious for human trafficking, but I don't see the hard data. I will be in a unique position to collect that raw data and answer the question.
-
-### Execution
+## Execution
 
 Add Java 7 to the PATH. Run the following command from the builds directory
 
